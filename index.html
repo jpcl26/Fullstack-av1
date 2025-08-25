@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Ingresso para Conferência</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="form-section">
+            <h1>Gerador de Ingresso</h1>
+            <p>Preencha os campos para gerar seu ingresso.</p>
+            
+            <form id="ticketForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                    <p class="error-message" aria-live="polite"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <p class="error-message" aria-live="polite"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="avatar">Avatar (PNG, JPG - máx 1MB)</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required>
+                    <p class="error-message" aria-live="polite"></p>
+                </div>
+
+                <button type="submit">Gerar meu Ingresso</button>
+            </form>
+        </section>
+
+        <section id="ticket-section" class="ticket-section" style="display: none;">
+            <h2>Seu Ingresso VIP</h2>
+            <div class="ticket">
+                <img id="ticket-avatar" src="" alt="Avatar do participante">
+                <p id="ticket-name"></p>
+                <p id="ticket-email"></p>
+                <span>#FrontEndConf2025</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
