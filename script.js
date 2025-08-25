@@ -91,3 +91,64 @@ document.addEventListener('DOMContentLoaded', () => {
         // form.style.display = 'none';
     }
 });
+
+/*
+Perguntas 
+// Para validar apenas o primeiro nome
+if (nameInput.value.trim().includes(' ')) {
+    showError(nameInput, 'Por favor, insira apenas o primeiro nome.');
+    return false;
+}
+
+// Para validar nome e sobrenome
+if (!nameInput.value.trim().includes(' ')) {
+    showError(nameInput, 'Por favor, insira nome e sobrenome.');
+    return false;
+}
+
+// Para mostrar o erro como um alert()
+const showError = (input, message) => {
+    alert(message);
+};
+
+// Para mostrar o erro como um toast
+const showError = (input, message) => {
+    Toastify({ text: message, backgroundColor: "red" }).showToast();
+};
+
+// Para validar que o '@' foi escrito
+if (!githubInput.value.startsWith('@')) {
+    showError(githubInput, 'O utilizador deve começar com @.');
+}
+
+// Para adicionar o '@' automaticamente
+let githubValue = githubInput.value.trim();
+if (!githubValue.startsWith('@')) {
+    githubValue = '@' + githubValue;
+}
+
+// Para evitar duplicação do '@'
+let githubValue = githubInput.value.trim().replaceAll('@', '');
+let finalGithubValue = '@' + githubValue;
+
+// Validar força da senha com Regex
+function validatePasswordStrength(input) {
+    const strongPasswordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+    if (!strongPasswordRegex.test(input.value)) {
+        showError(input, 'A senha precisa de 8+ caracteres, 1 maiúscula e 1 número.');
+        return false;
+    }
+    return true;
+}
+
+// Validação condicional
+function handleFormSubmit(event) {
+    event.preventDefault();
+    const isCompanyFilled = companyInput.value.trim() !== '';
+    let isWebsiteValid = true; // Válido por defeito
+
+    if (isCompanyFilled) {
+        isWebsiteValid = validateRequired(websiteInput); // Torna-se obrigatório
+    }
+}
+*/
