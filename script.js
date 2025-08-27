@@ -144,11 +144,10 @@ function validatePasswordStrength(input) {
 // Validação condicional
 function handleFormSubmit(event) {
     event.preventDefault();
-    const isCompanyFilled = companyInput.value.trim() !== '';
-    let isWebsiteValid = true; // Válido por defeito
+    const isCEPFilled = CEPInput.value.trim() !== '';
+    let isCidadeValid = true; // Válido por defeito
 
-    if (isCompanyFilled) {
-        isWebsiteValid = validateRequired(websiteInput); // Torna-se obrigatório
-    }
+    if (isCEPFilled) {
+        isCidadeValid = validateRequired(cidadeInput); // Torna-se obrigatório
 }
 */
